@@ -38,7 +38,7 @@
       <Unit1>
         <Filename Value="unit_awms_main.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="XWindow"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
     </Units>
