@@ -1,0 +1,24 @@
+object XWindow: TXWindow
+  Left = 368
+  Height = 240
+  Top = 123
+  Width = 320
+  Caption = 'XWindow'
+  Menu = XMenu
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.6'
+  object XMenu: TMainMenu
+    left = 288
+    top = 200
+    object option_system: TMenuItem
+      Caption = 'System'
+      object option_system_logout: TMenuItem
+        Caption = 'Log Out'
+      end
+      object option_system_exit: TMenuItem
+        Caption = 'Exit'
+        OnClick = Click_ExitApplication
+      end
+    end
+  end
+end
