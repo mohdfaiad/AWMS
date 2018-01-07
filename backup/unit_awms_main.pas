@@ -5,7 +5,8 @@ unit unit_awms_main;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus, IniFiles;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus, IniFiles,
+  unit_awms_main_database_details_modal;
 
 type
 
@@ -63,14 +64,26 @@ begin
     // The database has not been setup and we will have to display some sort
     // of modal in order to let the user setup any details
     if DB_SETUP_PREVIOUS = 0 then
+       begin
+
+            Application.CreateForm(Tmodal_enter_database_details, modal_enter_database_details);
+            modal_enter_database_details.ShowModal;
+
+
 
     // The database has been setup and we can retrieve some of the values
     // that are needed to connect
+       end
     else
-      DB_NAME := INI.ReadString(C_DB_SECTION, 'DB_NAME', 'awms');
-      DB_USER := INI.ReadString(C_DB_SECTION, 'DB_USER', 'administrator');
-      DB_PASS := INI.ReadString(C_DB_SECTION, 'DB_PASS', 'password');
-      DB_PORT := INI.ReadInteger(C_DB_SECTION, 'DB_PORT', 3306);
+        begin
+          DB_NAME := INI.ReadString(C_DB_SECTION, 'DB_NAME', 'awms');
+          DB_USER := INI.ReadString(C_DB_SECTION, 'DB_USER', 'administrator');
+          DB_PASS := INI.ReadString(C_DB_SECTION, 'DB_PASS', 'password');
+          DB_PORT := INI.ReadInteger(C_DB_SECTION, 'DB_PORT', 3306);
+
+          Write('TESTTT');
+
+        end;
   finally
          INI.Free;
   end;

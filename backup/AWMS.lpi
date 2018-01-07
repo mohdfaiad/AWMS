@@ -11,9 +11,6 @@
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
     </General>
-    <VersionInfo>
-      <StringTable ProductVersion=""/>
-    </VersionInfo>
     <BuildModes Count="1">
       <Item1 Name="Default" Default="True"/>
     </BuildModes>
@@ -30,7 +27,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="5">
       <Unit0>
         <Filename Value="AWMS.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -39,8 +36,26 @@
         <Filename Value="unit_awms_main.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="XWindow"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="unit_awms_main_enter_database_details_modal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <HasResources Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unit_awms_main_enter_database_details_modal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Modal_EnterDatabaseDetails"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="unit_awms_main_database_details_modal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

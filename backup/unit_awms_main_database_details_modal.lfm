@@ -1,0 +1,10 @@
+object modal_enter_database_details: Tmodal_enter_database_details
+  Left = 409
+  Height = 350
+  Top = 170
+  Width = 550
+  BorderIcons = [biSystemMenu]
+  Caption = 'modal_enter_database_details'
+  OnCreate = FormCreate
+  LCLVersion = '1.8.0.6'
+end
