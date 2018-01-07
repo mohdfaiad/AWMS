@@ -1,10 +1,107 @@
 object modal_enter_database_details: Tmodal_enter_database_details
-  Left = 409
-  Height = 350
-  Top = 170
-  Width = 550
+  Left = 451
+  Height = 301
+  Top = 287
+  Width = 481
   BorderIcons = [biSystemMenu]
   Caption = 'modal_enter_database_details'
+  ClientHeight = 301
+  ClientWidth = 481
   OnCreate = FormCreate
   LCLVersion = '1.8.0.6'
+  object label_welcome: TLabel
+    Left = 0
+    Height = 28
+    Top = 0
+    Width = 481
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'Welcome to AWMS'
+    Font.Height = -20
+    ParentColor = False
+    ParentFont = False
+  end
+  object label_information: TLabel
+    Left = 80
+    Height = 75
+    Top = 48
+    Width = 321
+    Align = alCustom
+    Alignment = taCenter
+    Caption = 'AWMS has detected this is a new install on this system.'#13#10#13#10'To get started, please enter the AWMS database details.'#13#10'If there is already a AWMS system in the database, all settings'#13#10'will be imported.'
+    ParentColor = False
+  end
+  object label_hostname: TLabel
+    Left = 85
+    Height = 21
+    Top = 140
+    Width = 71
+    Caption = 'Hostname'
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+  end
+  object input_hostname: TEdit
+    Left = 189
+    Height = 23
+    Top = 140
+    Width = 212
+    TabOrder = 0
+  end
+  object label_username: TLabel
+    Left = 85
+    Height = 21
+    Top = 168
+    Width = 71
+    Caption = 'Username'
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+  end
+  object input_username: TEdit
+    Left = 189
+    Height = 23
+    Top = 168
+    Width = 212
+    TabOrder = 1
+  end
+  object input_password: TEdit
+    Left = 189
+    Height = 23
+    Top = 196
+    Width = 212
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object label_password: TLabel
+    Left = 85
+    Height = 21
+    Top = 196
+    Width = 66
+    Caption = 'Password'
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+  end
+  object label_port: TLabel
+    Left = 85
+    Height = 21
+    Top = 224
+    Width = 28
+    Caption = 'Port'
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+  end
+  object input_port: TEdit
+    Left = 189
+    Height = 23
+    Top = 224
+    Width = 212
+    EchoMode = emPassword
+    NumbersOnly = True
+    PasswordChar = '*'
+    TabOrder = 3
+  end
 end

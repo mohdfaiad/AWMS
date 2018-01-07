@@ -27,7 +27,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="4">
       <Unit0>
         <Filename Value="AWMS.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -45,17 +45,12 @@
         <HasResources Value="True"/>
       </Unit2>
       <Unit3>
-        <Filename Value="unit_awms_main_enter_database_details_modal.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="Modal_EnterDatabaseDetails"/>
-        <ResourceBaseClass Value="Form"/>
-      </Unit3>
-      <Unit4>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="modal_enter_database_details"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-      </Unit4>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

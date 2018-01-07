@@ -12,7 +12,20 @@ type
   { Tmodal_enter_database_details }
 
   Tmodal_enter_database_details = class(TForm)
-    Label1: TLabel;
+    button_connect: TButton;
+    button_cancel: TButton;
+    input_name: TEdit;
+    input_password: TEdit;
+    input_port: TEdit;
+    label_name: TLabel;
+    label_port: TLabel;
+    label_username: TLabel;
+    input_hostname: TEdit;
+    label_hostname: TLabel;
+    label_information: TLabel;
+    label_password: TLabel;
+    label_welcome: TLabel;
+    input_username: TEdit;
     procedure FormCreate(Sender: TObject);
   private
 
