@@ -1,19 +1,19 @@
 object modal_enter_database_details: Tmodal_enter_database_details
-  Left = 92
-  Height = 352
-  Top = 24
-  Width = 520
+  Left = 583
+  Height = 404
+  Top = 71
+  Width = 535
   BorderIcons = [biSystemMenu]
-  Caption = 'modal_enter_database_details'
-  ClientHeight = 352
-  ClientWidth = 520
+  Caption = 'Database Setup'
+  ClientHeight = 404
+  ClientWidth = 535
   OnCreate = FormCreate
   LCLVersion = '1.8.0.6'
   object label_welcome: TLabel
     Left = 0
     Height = 28
     Top = 0
-    Width = 520
+    Width = 535
     Align = alTop
     Alignment = taCenter
     Caption = 'Welcome to AWMS'
@@ -32,7 +32,7 @@ object modal_enter_database_details: Tmodal_enter_database_details
     ParentColor = False
   end
   object label_hostname: TLabel
-    Left = 106
+    Left = 88
     Height = 21
     Top = 144
     Width = 71
@@ -50,7 +50,7 @@ object modal_enter_database_details: Tmodal_enter_database_details
     TabOrder = 0
   end
   object label_username: TLabel
-    Left = 105
+    Left = 88
     Height = 21
     Top = 209
     Width = 71
@@ -76,9 +76,9 @@ object modal_enter_database_details: Tmodal_enter_database_details
     TabOrder = 3
   end
   object label_password: TLabel
-    Left = 105
+    Left = 88
     Height = 21
-    Top = 241
+    Top = 240
     Width = 66
     Caption = 'Password'
     Font.Height = -16
@@ -86,9 +86,9 @@ object modal_enter_database_details: Tmodal_enter_database_details
     ParentFont = False
   end
   object label_port: TLabel
-    Left = 106
+    Left = 88
     Height = 21
-    Top = 273
+    Top = 272
     Width = 28
     Caption = 'Port'
     Font.Height = -16
@@ -104,11 +104,11 @@ object modal_enter_database_details: Tmodal_enter_database_details
     TabOrder = 4
   end
   object label_name: TLabel
-    Left = 106
+    Left = 88
     Height = 21
     Top = 177
-    Width = 42
-    Caption = 'Name'
+    Width = 110
+    Caption = 'Database Name'
     Font.Height = -16
     ParentColor = False
     ParentFont = False
@@ -121,22 +121,31 @@ object modal_enter_database_details: Tmodal_enter_database_details
     TabOrder = 1
   end
   object button_connect: TButton
-    Left = 432
+    Left = 448
     Height = 25
-    Top = 312
+    Top = 368
     Width = 75
     Caption = 'Connect'
     OnClick = CheckConnection
     TabOrder = 5
   end
   object button_cancel: TButton
-    Left = 344
+    Left = 360
     Height = 25
-    Top = 312
+    Top = 368
     Width = 75
     Caption = 'Cancel'
     OnClick = button_cancelClick
     TabOrder = 6
+  end
+  object connection_progressbar: TProgressBar
+    Left = 160
+    Height = 25
+    Top = 320
+    Width = 216
+    Style = pbstMarquee
+    TabOrder = 7
+    Visible = False
   end
   object MySQL55Connection1: TMySQL55Connection
     Connected = False

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, mysql55conn, FileUtil, Forms, Controls,
-  Graphics, Dialogs, StdCtrls;
+  Graphics, Dialogs, StdCtrls, ComCtrls;
 
 type
 
@@ -28,6 +28,8 @@ type
     label_welcome: TLabel;
     input_username: TEdit;
     connection_mysql: TMySQL55Connection;
+    MySQL55Connection1: TMySQL55Connection;
+    connection_progressbar: TProgressBar;
     procedure button_cancelClick(Sender: TObject);
     procedure CheckConnection(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -70,7 +72,6 @@ end;
 
 procedure Tmodal_enter_database_details.CheckConnection(Sender: TObject);
 begin
-
   // Check if any of the fields are empty here
 
   if input_hostname.Text = '' then
@@ -105,6 +106,12 @@ begin
       mtConfirmation, [mrYes, 'Continue', mrNo, 'Cancel'], 'HelpKeyWordEdit') = mrYes then
     begin
       try
+        input_hostname.Enabled := False;
+        input_name.Enabled := False;
+        input_username.Enabled := False;
+        input_password.Enabled := False;
+        input_port.Enabled := False;
+
         mysql := TMySql55Connection.Create(nil);
 
         try
@@ -112,14 +119,24 @@ begin
           mysql.UserName := input_username.Text;
           mysql.DatabaseName := input_name.Text;
           mysql.Password := input_password.Text;
+          mysql.Port := 3307;
 
           try
             mysql.Connected := True;
-            writeln('Connection succeeded');
+            if MessageDlg('Connected!', mtInformation, [mbOK], 0) = mrOk then
+            begin
+              Close;
+            end;
           except
             MessageDlg(
               'Failed to connect to the database. Please check your details and try again.',
               mtError, [mbOK], 0);
+
+            input_hostname.Enabled := True;
+            input_name.Enabled := True;
+            input_username.Enabled := True;
+            input_password.Enabled := True;
+            input_port.Enabled := True;
           end;
         finally
           mysql.Connected := False;
@@ -128,6 +145,49 @@ begin
       finally
 
       end;
+    end;
+  end
+  else
+  begin
+    try
+      input_hostname.Enabled := False;
+      input_name.Enabled := False;
+      input_username.Enabled := False;
+      input_password.Enabled := False;
+      input_port.Enabled := False;
+
+      mysql := TMySql55Connection.Create(nil);
+
+      try
+        mysql.HostName := input_hostname.Text;
+        mysql.UserName := input_username.Text;
+        mysql.DatabaseName := input_name.Text;
+        mysql.Password := input_password.Text;
+        mysql.Port := 3307;
+
+        try
+          mysql.Connected := True;
+          if MessageDlg('Connected!', mtInformation, [mbOK], 0) = mrOk then
+          begin
+            Close;
+          end;
+        except
+          MessageDlg(
+            'Failed to connect to the database. Please check your details and try again.',
+            mtError, [mbOK], 0);
+
+          input_hostname.Enabled := True;
+          input_name.Enabled := True;
+          input_username.Enabled := True;
+          input_password.Enabled := True;
+          input_port.Enabled := True;
+        end;
+      finally
+        mysql.Connected := False;
+        mysql.Free;
+      end;
+    finally
+
     end;
   end;
 end;
