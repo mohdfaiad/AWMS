@@ -1,7 +1,7 @@
 object XWindow: TXWindow
-  Left = 463
+  Left = 436
   Height = 240
-  Top = 177
+  Top = 224
   Width = 320
   Caption = 'XWindow'
   Menu = XMenu

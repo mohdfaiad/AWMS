@@ -1,7 +1,7 @@
 object modal_enter_database_details: Tmodal_enter_database_details
-  Left = 335
+  Left = 92
   Height = 352
-  Top = 235
+  Top = 24
   Width = 520
   BorderIcons = [biSystemMenu]
   Caption = 'modal_enter_database_details'
@@ -46,6 +46,7 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Height = 23
     Top = 145
     Width = 212
+    OnChange = input_hostnameChange
     TabOrder = 0
   end
   object label_username: TLabel
@@ -63,7 +64,7 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Height = 23
     Top = 209
     Width = 212
-    TabOrder = 1
+    TabOrder = 2
   end
   object input_password: TEdit
     Left = 210
@@ -72,7 +73,7 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Width = 212
     EchoMode = emPassword
     PasswordChar = '*'
-    TabOrder = 2
+    TabOrder = 3
   end
   object label_password: TLabel
     Left = 105
@@ -99,10 +100,8 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Height = 23
     Top = 273
     Width = 212
-    EchoMode = emPassword
     NumbersOnly = True
-    PasswordChar = '*'
-    TabOrder = 3
+    TabOrder = 4
   end
   object label_name: TLabel
     Left = 106
@@ -119,7 +118,7 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Height = 23
     Top = 177
     Width = 212
-    TabOrder = 4
+    TabOrder = 1
   end
   object button_connect: TButton
     Left = 432
@@ -127,6 +126,7 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Top = 312
     Width = 75
     Caption = 'Connect'
+    OnClick = CheckConnection
     TabOrder = 5
   end
   object button_cancel: TButton
@@ -135,6 +135,15 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Top = 312
     Width = 75
     Caption = 'Cancel'
+    OnClick = button_cancelClick
     TabOrder = 6
+  end
+  object MySQL55Connection1: TMySQL55Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    SkipLibraryVersionCheck = False
+    left = 456
+    top = 32
   end
 end

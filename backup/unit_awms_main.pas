@@ -69,8 +69,6 @@ begin
             Application.CreateForm(Tmodal_enter_database_details, modal_enter_database_details);
             modal_enter_database_details.ShowModal;
 
-
-
     // The database has been setup and we can retrieve some of the values
     // that are needed to connect
        end
