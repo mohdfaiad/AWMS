@@ -7,7 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, unit_awms_main, unit_awms_main_database_details_modal
+  Forms, unit_awms_main, unit_awms_main_database_details_modal, SetupQueries
   { you can add units after this };
 
 {$R *.res}

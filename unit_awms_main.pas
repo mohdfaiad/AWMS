@@ -8,6 +8,7 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus, IniFiles,
 
   BlowFish,
+  SetupQueries,
 
   unit_awms_main_database_details_modal;
 
@@ -97,7 +98,7 @@ begin
                     INI.WriteString(C_DB_SECTION, 'DB_NAME', modal_enter_database_details.input_name.Text);
                     INI.WriteString(C_DB_SECTION, 'DB_USERNAME', modal_enter_database_details.input_username.Text);
                     INI.WriteString(C_DB_SECTION, 'DB_PASSWORD', STREAM_1.DataString);
-                    INI.WriteString(C_DB_SECTION, 'DB_PORT', StrToInt(modal_enter_database_details.input_port.Text));
+                    INI.WriteInteger(C_DB_SECTION, 'DB_PORT', StrToInt(modal_enter_database_details.input_port.Text));
                end;
 
             // Write(modal_enter_database_details.input_hostname.Text);
@@ -112,6 +113,8 @@ begin
           DB_USER := INI.ReadString(C_DB_SECTION, 'DB_USER', 'administrator');
           DB_PASS := INI.ReadString(C_DB_SECTION, 'DB_PASS', 'password');
           DB_PORT := INI.ReadInteger(C_DB_SECTION, 'DB_PORT', 3306);
+
+          SetupQueries.Query_DoesInstallationExist();
 
         end;
   finally

@@ -8,6 +8,7 @@ uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus, IniFiles,
 
   BlowFish,
+  SetupQueries,
 
   unit_awms_main_database_details_modal;
 
@@ -83,6 +84,10 @@ begin
 
                     // We now have the details and can connect to the database. From here,
                     // 1: The AWMS_DETAIL Table is checked
+                       // If it doesn't exist, we'll tell the user do they want to install AWMS onto the database
+                          // If yes, Do all the tables, then return to step 2
+                       // Else refuse, and exit
+                    // 2: If the table does exist, add the data and link up
 
                     STREAM_1 := TStringStream.Create('');
                     ENC_STREAM := TBlowFishEncryptStream.Create(C_DB_KEY, STREAM_1);
@@ -93,7 +98,7 @@ begin
                     INI.WriteString(C_DB_SECTION, 'DB_NAME', modal_enter_database_details.input_name.Text);
                     INI.WriteString(C_DB_SECTION, 'DB_USERNAME', modal_enter_database_details.input_username.Text);
                     INI.WriteString(C_DB_SECTION, 'DB_PASSWORD', STREAM_1.DataString);
-                    INI.WriteString(C_DB_SECTION, 'DB_PORT', StrToInt(modal_enter_database_details.input_port.Text));
+                    INI.WriteInteger(C_DB_SECTION, 'DB_PORT', StrToInt(modal_enter_database_details.input_port.Text));
                end;
 
             // Write(modal_enter_database_details.input_hostname.Text);

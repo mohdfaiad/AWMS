@@ -16,8 +16,6 @@ begin
   RequireDerivedFormResource:=True;
   Application.Initialize;
   Application.CreateForm(TXWindow, XWindow);
-  Application.CreateForm(Tmodal_enter_database_details, 
-    modal_enter_database_details);
   Application.Run;
 end.
 
