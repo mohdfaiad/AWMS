@@ -4,13 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="7">
+    <Units Count="6">
       <Unit0>
         <Filename Value="AWMS.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="18"/>
-        <UsageCount Value="42"/>
+        <CursorPos X="24" Y="10"/>
+        <UsageCount Value="142"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,9 +19,9 @@
         <ComponentName Value="XWindow"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="47"/>
-        <CursorPos X="21" Y="68"/>
-        <UsageCount Value="42"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="12" Y="10"/>
+        <UsageCount Value="142"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -31,7 +31,7 @@
         <HasResources Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="22" Y="17"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="138"/>
       </Unit2>
       <Unit3>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
@@ -39,155 +39,147 @@
         <ComponentName Value="modal_enter_database_details"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="47"/>
-        <CursorPos X="7" Y="68"/>
-        <UsageCount Value="37"/>
+        <TopLine Value="100"/>
+        <CursorPos X="29" Y="122"/>
+        <UsageCount Value="137"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
-        <Filename Value="unit_awms_main.lfm"/>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="62" Y="23"/>
-        <UsageCount Value="8"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
+        <TopLine Value="3883"/>
+        <CursorPos X="25" Y="3904"/>
+        <UsageCount Value="6"/>
       </Unit4>
       <Unit5>
-        <Filename Value="C:\lazarus\lcl\include\customform.inc"/>
+        <Filename Value="C:\lazarus\lcl\stdctrls.pp"/>
+        <UnitName Value="StdCtrls"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="2295"/>
-        <CursorPos Y="2307"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="6"/>
       </Unit5>
-      <Unit6>
-        <Filename Value="unit_awms_main_database_details_modal.lfm"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="9"/>
-        <DefaultSyntaxHighlighter Value="LFM"/>
-      </Unit6>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="unit_awms_main.pas"/>
-        <Caret Line="64" Column="42" TopLine="55"/>
+        <Filename Value="unit_awms_main_database_details_modal.pas"/>
+        <Caret Line="20" Column="26"/>
       </Position1>
       <Position2>
-        <Filename Value="unit_awms_main.pas"/>
-        <Caret Line="69" Column="14" TopLine="58"/>
+        <Filename Value="unit_awms_main_database_details_modal.pas"/>
+        <Caret Line="21" Column="26"/>
       </Position2>
       <Position3>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="23" Column="33" TopLine="14"/>
+        <Caret Line="20" Column="26"/>
       </Position3>
       <Position4>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="31" Column="69" TopLine="15"/>
+        <Caret Line="19" Column="26"/>
       </Position4>
       <Position5>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="22" Column="21" TopLine="3"/>
+        <Caret Line="21" Column="44"/>
       </Position5>
       <Position6>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="7" Column="18"/>
+        <Caret Line="23" Column="44"/>
       </Position6>
       <Position7>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="33" Column="3" TopLine="15"/>
+        <Caret Line="25" Column="44" TopLine="3"/>
       </Position7>
       <Position8>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="35" Column="3" TopLine="15"/>
+        <Caret Line="21" Column="34"/>
       </Position8>
       <Position9>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="31" Column="18" TopLine="16"/>
+        <Caret Line="23" Column="34"/>
       </Position9>
       <Position10>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="16" Column="26"/>
+        <Caret Line="25" Column="34" TopLine="3"/>
       </Position10>
       <Position11>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="17" Column="26"/>
+        <Caret Line="26" Column="34" TopLine="4"/>
       </Position11>
       <Position12>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="18" Column="26"/>
+        <Caret Line="54" Column="40" TopLine="36"/>
       </Position12>
       <Position13>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="19" Column="26"/>
+        <Caret Line="18" Column="3" TopLine="18"/>
       </Position13>
       <Position14>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="20" Column="26"/>
+        <Caret Line="64" Column="33"/>
       </Position14>
       <Position15>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="21" Column="26"/>
+        <Caret Line="24" Column="35" TopLine="7"/>
       </Position15>
       <Position16>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="20" Column="26"/>
+        <Caret Line="8" Column="23"/>
       </Position16>
       <Position17>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="19" Column="26"/>
+        <Caret Line="61" Column="38" TopLine="48"/>
       </Position17>
       <Position18>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="21" Column="44"/>
+        <Caret Line="56" Column="38" TopLine="47"/>
       </Position18>
       <Position19>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="23" Column="44"/>
+        <Caret Line="55" Column="38" TopLine="46"/>
       </Position19>
       <Position20>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="25" Column="44" TopLine="3"/>
+        <Caret Line="10" Column="25"/>
       </Position20>
       <Position21>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="21" Column="34"/>
+        <Caret Line="36" Column="5" TopLine="19"/>
       </Position21>
       <Position22>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="23" Column="34"/>
+        <Caret Line="73" Column="25" TopLine="48"/>
       </Position22>
       <Position23>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="25" Column="34" TopLine="3"/>
+        <Caret Line="27" Column="37" TopLine="10"/>
       </Position23>
       <Position24>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="26" Column="34" TopLine="4"/>
+        <Caret Line="32" Column="2" TopLine="5"/>
       </Position24>
       <Position25>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="54" Column="40" TopLine="36"/>
+        <Caret Line="27" Column="35" TopLine="13"/>
       </Position25>
       <Position26>
-        <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="18" Column="3" TopLine="18"/>
+        <Filename Value="unit_awms_main.pas"/>
+        <Caret Line="66" Column="32" TopLine="49"/>
       </Position26>
       <Position27>
-        <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="64" Column="33"/>
+        <Filename Value="unit_awms_main.pas"/>
+        <Caret Line="59" Column="45" TopLine="49"/>
       </Position27>
       <Position28>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="24" Column="35" TopLine="7"/>
+        <Caret Line="9" Column="50"/>
       </Position28>
       <Position29>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="8" Column="23"/>
+        <Caret Line="10" Column="49"/>
       </Position29>
       <Position30>
         <Filename Value="unit_awms_main_database_details_modal.pas"/>
-        <Caret Line="61" Column="38" TopLine="48"/>
+        <Caret Line="173" Column="33" TopLine="157"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>

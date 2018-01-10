@@ -1,11 +1,11 @@
 object modal_enter_database_details: Tmodal_enter_database_details
-  Left = 583
-  Height = 404
-  Top = 71
+  Left = 25
+  Height = 427
+  Top = 148
   Width = 535
   BorderIcons = [biSystemMenu]
   Caption = 'Database Setup'
-  ClientHeight = 404
+  ClientHeight = 427
   ClientWidth = 535
   OnCreate = FormCreate
   LCLVersion = '1.8.0.6'
@@ -137,15 +137,6 @@ object modal_enter_database_details: Tmodal_enter_database_details
     Caption = 'Cancel'
     OnClick = button_cancelClick
     TabOrder = 6
-  end
-  object connection_progressbar: TProgressBar
-    Left = 160
-    Height = 25
-    Top = 320
-    Width = 216
-    Style = pbstMarquee
-    TabOrder = 7
-    Visible = False
   end
   object MySQL55Connection1: TMySQL55Connection
     Connected = False

@@ -119,7 +119,7 @@ begin
           mysql.UserName := input_username.Text;
           mysql.DatabaseName := input_name.Text;
           mysql.Password := input_password.Text;
-          mysql.Port := 3307;
+          mysql.Port := 3306;
 
           try
             mysql.Connected := True;
@@ -163,13 +163,14 @@ begin
         mysql.UserName := input_username.Text;
         mysql.DatabaseName := input_name.Text;
         mysql.Password := input_password.Text;
-        mysql.Port := 3307;
+        mysql.Port := 3306;
 
         try
           mysql.Connected := True;
+
           if MessageDlg('Connected!', mtInformation, [mbOK], 0) = mrOk then
           begin
-            Close;
+            ModalResult := mrOk;
           end;
         except
           MessageDlg(
